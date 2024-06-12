@@ -3,7 +3,6 @@ import './App.css';
 import Add from './components/Add';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Search from './components/Search';
-import View from './components/view';
 import ViewAll from './components/ViewAll';
 
 function App() {

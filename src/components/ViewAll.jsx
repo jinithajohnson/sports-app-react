@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const ViewAll = () => {
     const [data,changeData]=useState([])
     const fetchdata=()=>{
-        axios.get("http://localhost:8080/view").then(
+        axios.get("http://localhost:8081/view").then(
             (response)=>{
                 changeData(response.data)
             }

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 const Search = () => {
   
-const [data, changeData] = useState(
+const [data,changeData] = useState(
        {
         name:""
        }
@@ -12,7 +12,7 @@ const [data, changeData] = useState(
 
     const deleteCourse=(id)=>{
         let input = {"_id":id} 
-        axios.post("http://localhost:8080/delete",input).then(
+        axios.post("http://localhost:8081/delete",input).then(
             (response)=>{
                 console.log(response.data)
                 if(response.data.status=="success")
@@ -35,7 +35,7 @@ const [data, changeData] = useState(
         
     const readValue = () => {
         console.log(data)
-        axios.post("http://localhost:8080/search",data).then(
+        axios.post("http://localhost:8081/search",data).then(
             (response)=>{
                 
                 changeResult(response.data)
