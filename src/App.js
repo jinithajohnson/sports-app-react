@@ -6,9 +6,14 @@ import Search from './components/Search';
 
 function App() {
   return (
-    <div className="App">
-      <Add/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+        <Route path='/' element={<Add/>} />
+        <Route path='/' element={<Search/>} />
+        
+
+    </Routes>
+    </BrowserRouter>
   );
 }
 
